@@ -8,10 +8,10 @@ def rescale_frame(frame, scale):    # works for image, video, live video
     dimensions = (width, height)
     return cv2.resize(frame, dimensions, interpolation=cv2.INTER_AREA)
 
-my_image = "C:\\Users\\bilgi\\OneDrive\\Masaüstü\\WhatsApp Image 2023-12-31 at 16.43.17_30f0f4a4.jpg"
+my_image = "path of your image"
 
 # Load the YOLO model
-model = YOLO('C:\\Users\\bilgi\\OneDrive\\Masaüstü\\code\\AI\go br\\AI v3\\weights\\best.pt')
+model = YOLO("path of your model")
 
 # Move the model to the GPU if available
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
